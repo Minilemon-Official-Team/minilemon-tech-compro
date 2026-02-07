@@ -1,11 +1,35 @@
 import Image from "next/image";
-import AnimatedText from "@/components/section/product/AnimatedText";
+import AnimatedText from "@/components/sections/product/AnimatedText";
+import CardProduct from "@/components/sections/product/CardProduct";
+import { WireframeCube } from "@/components/sections/product/WireframeCube";
 
 export default function ProductDesktop() {
-  const texts = "OURCOMPANY";
+  const datasCard = [
+    {
+      id: "citrus-os",
+      title: "CitrusOS",
+      description:
+        "A distributed runtime for high-concurrency cloud environments, prioritizing low-latency and auto-healing capabilities.",
+      features: ["Infastructure", "Production"],
+    },
+    {
+      id: "lumina-grid",
+      title: "Lumina Grid",
+      description:
+        "Real-time data visualization engine for IoT sensor networks, providing deep insights into complex physical systems.",
+      features: ["Data & AI", "Beta"],
+    },
+    {
+      id: "vertex-protocol",
+      title: "Vertex Protocol",
+      description:
+        "An encrypted communication layer designed for secure multi-party computation and private collaboration.",
+      features: ["Security", "Alpha"],
+    },
+  ];
 
   return (
-    <div className="w-full max-w-6xl mx-auto  flex flex-col gap-12 items-center justify-center py-20">
+    <div className="w-full max-w-7xl mx-auto  flex flex-col gap-12 items-center justify-center py-20">
       <div className="w-full min-h-screen px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <header className="relative z-20">
           <p
@@ -81,8 +105,8 @@ export default function ProductDesktop() {
             <span className="text-[#FFDD10] font-bold">
               Core Team Philosophy
             </span>{" "}
-            The Core Team operates as Minilemon Technology’s product engine.
-            They are responsible for research, design, development, and
+            The Core Team operates as Minilemon Technology&apos;s product
+            engine. They are responsible for research, design, development, and
             long-term maintenance of original products.
           </p>
           <p>
@@ -92,11 +116,56 @@ export default function ProductDesktop() {
           </p>
         </div>
       </div>
-      <div className="w-full min-h-screen border border-white text-white">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores
-        quae quos, voluptate assumenda totam itaque aliquid architecto illum
-        earum magni dicta nihil velit dolor laboriosam omnis id dignissimos,
-        iure optio?
+      <div className="relative w-full min-h-screen flex flex-col gap-8 items-center">
+
+        <div className="absolute rotate-8 top-90 -right-2 w-[240px] h-[263px] pointer-events-none overflow-visible">
+          {/* KUBUS ATAS */}
+          <div className="absolute z-30" style={{ left: "60px", top: "10px" }}>
+            <WireframeCube className="w-[120px] h-[150px] text-purple-300/80 drop-shadow-[0_0_8px_rgba(192,132,252,0.5)]" />
+          </div>
+
+          {/* KUBUS KIRI BAWAH */}
+          <div className="absolute z-20" style={{ left: "0px", top: "113px" }}>
+            <WireframeCube className="w-[120px] h-[150px] text-purple-300/80 drop-shadow-[0_0_8px_rgba(192,132,252,0.5)]" />
+          </div>
+
+          {/* KUBUS KANAN BAWAH */}
+          <div
+            className="absolute z-20"
+            style={{ left: "120px", top: "113px" }}
+          >
+            <WireframeCube className="w-[120px] h-[150px] text-purple-300/80 drop-shadow-[0_0_8px_rgba(192,132,252,0.5)]" />
+          </div>
+        </div>
+
+        <div className="absolute -rotate-12 top-[56%] -left-[2%] w-[240px] h-[263px] pointer-events-none overflow-visible">
+          {/* KUBUS ATAS */}
+          <div className="absolute z-30" style={{ left: "60px", top: "10px" }}>
+            <WireframeCube className="w-[120px] h-[150px] text-purple-300/80 drop-shadow-[0_0_8px_rgba(192,132,252,0.5)]" />
+          </div>
+
+          {/* KUBUS KIRI BAWAH */}
+          <div className="absolute z-20" style={{ left: "0px", top: "113px" }}>
+            <WireframeCube className="w-[120px] h-[150px] text-purple-300/80 drop-shadow-[0_0_8px_rgba(192,132,252,0.5)]" />
+          </div>
+
+          {/* KUBUS KANAN BAWAH */}
+          <div
+            className="absolute z-20"
+            style={{ left: "120px", top: "113px" }}
+          >
+            <WireframeCube className="w-[120px] h-[150px] text-purple-300/80 drop-shadow-[0_0_8px_rgba(192,132,252,0.5)]" />
+          </div>
+        </div>
+
+        {datasCard.map((data) => (
+          <CardProduct
+            key={data.id}
+            title={data.title}
+            description={data.description}
+            features={data.features}
+          />
+        ))}
       </div>
     </div>
   );

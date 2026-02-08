@@ -1,6 +1,6 @@
 import React from "react";
 
-const AnimatedText = ({ text, rotate }) => {
+export default function AnimatedText({ text, rotate }) {
   return (
     <h2
       className={`flex flex-wrap text-[80px] leading-none select-none ${rotate}`}
@@ -23,6 +23,4 @@ const AnimatedText = ({ text, rotate }) => {
       ))}
     </h2>
   );
-};
-
-export default AnimatedText;
+}

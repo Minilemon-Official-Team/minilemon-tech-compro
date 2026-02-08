@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-export const WireframeCube = ({ className = "" }) => {
+export default function WireframeCube({ className = "" }) {
   return (
     <div className={`relative ${className}`}>
       <svg
@@ -14,13 +14,13 @@ export const WireframeCube = ({ className = "" }) => {
       >
         {/* Sisi Atas */}
         <path d="M50 2 L98 27 L50 52 L2 27 Z" />
-        
+
         {/* Sisi Kanan */}
         <path d="M98 27 V77 L50 102 V52 Z" />
-        
+
         {/* Sisi Kiri */}
         <path d="M2 27 V77 L50 102 V52 Z" />
       </svg>
     </div>
   );
-};
+}

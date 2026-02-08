@@ -1,7 +1,13 @@
-export const WireframeCube = ({ className, color = "currentColor" }) => {
+export default function WireframeCube({ className, color = "currentColor" }) {
   return (
     <div className={className}>
-      <svg width="100%" height="100%" viewBox="0 0 150 172" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        width="100%"
+        height="100%"
+        viewBox="0 0 150 172"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         {/* ATAS */}
         <path
           d="M 75 0 L 150 43 L 75 86 L 0 43 Z"
@@ -26,4 +32,4 @@ export const WireframeCube = ({ className, color = "currentColor" }) => {
       </svg>
     </div>
   );
-};
+}

@@ -1,8 +1,8 @@
 import FounderCard from "@/components/sections/collab/FounderCard";
 import Image from "next/image";
-import { WireframeCube } from "@/components/sections/collab/WireframeCube";
 import PlaygroundCard from "@/components/sections/collab/PlaygroundCard";
 import StepCard from "@/components/sections/collab/StepCard";
+import WireframeCube from "@/components/sections/collab/WireframeCube";
 
 export default function CollabDesktop() {
   const founderDatas = [
@@ -97,21 +97,21 @@ export default function CollabDesktop() {
         </div>
       </div>
       <div className="w-full min-h-screen px-6 flex items-center gap-16">
-        <div className="max-w-7xl bg-[#181818] border-2 border-white text-white px-4 grid grid-cols-[1fr_2fr] gap-12 ">
-          <div className="w-[420px] h-[560px] ">
+        <div className="max-w-7xl bg-[#181818] border-2 border-white text-white p-8 grid grid-cols-[1fr_2fr] gap-12 ">
+          <div className="max-w-[420px] max-h-[560px] ">
             <Image
               alt=""
               src="/assets/collab_playground.png"
               width={400}
               height={400}
-              className="w-full h-full object-contain"
+              className="w-full h-full object-cover"
             />
           </div>
-          <div className="flex flex-col justify-center">
-            <h2 className="text-3xl font-bold leading-tight mb-8">
+          <div className="flex flex-col justify-center max-w-3xl mx-auto">
+            <h2 className="text-xl md:text-2xl lg:text-4xl font-bold leading-tight mb-8">
               The Playground
             </h2>
-            <p className="text-xl leading-relaxed mb-2">
+            <p className="text-base md:text-lg lg:text-xl leading-relaxed mb-6">
               The Playground Team is dedicated to experimentation, open-source
               initiatives, learning programs, and technology-driven social
               impact. It is our sandbox for the future.

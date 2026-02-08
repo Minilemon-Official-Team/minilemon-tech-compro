@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const FounderCard = ({ props }) => {
+export default function FounderCard({ props }) {
   const isEven = props.id % 2 === 0;
 
   return (
@@ -39,6 +39,4 @@ const FounderCard = ({ props }) => {
       </div>
     </div>
   );
-};
-
-export default FounderCard;
+}

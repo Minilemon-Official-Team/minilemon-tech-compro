@@ -4,9 +4,9 @@ import CardPill from "./CardPill";
 
 export default function CardProduct({ title, description, features }) {
   return (
-    <div className="rounded-2xl p-4 max-w-4xl bg-[#181818] grid grid-cols-2 gap-8 hover:border hover:border-white">
+    <div className="rounded-2xl p-4 max-w-4xl bg-[#181818] hover:bg-[#2B2B2B] grid grid-cols-2 gap-8 transition-all duration-700 ease-out border-3 hover:border-white">
       <Image
-        alt=""
+        alt={title}
         src="/assets/product_card_template.png"
         width={400}
         height={400}

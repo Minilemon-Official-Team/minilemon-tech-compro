@@ -1,7 +1,7 @@
 import React from "react";
 import { Facebook, Instagram, Whatsapp } from "./Social";
 
-const SocialLinks = () => {
+export default function SocialLinks() {
   return (
     <div className="flex gap-8">
       <a href="#" aria-label="Instagram">
@@ -17,4 +17,4 @@ const SocialLinks = () => {
   );
 };
 
-export default SocialLinks;
+

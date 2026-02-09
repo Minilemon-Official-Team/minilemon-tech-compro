@@ -1,7 +1,7 @@
 import Image from "next/image";
 import AnimatedText from "@/components/sections/product/AnimatedText";
 import CardProduct from "@/components/sections/product/CardProduct";
-import { WireframeCube } from "@/components/sections/product/WireframeCube";
+import WireframeCube from "@/components/sections/product/WireframeCube";
 
 export default function ProductDesktop() {
   const datasCard = [
@@ -29,7 +29,7 @@ export default function ProductDesktop() {
   ];
 
   return (
-    <div className="w-full max-w-7xl mx-auto  flex flex-col gap-12 items-center justify-center py-20">
+    <div className="w-full mx-auto flex flex-col gap-12 items-center justify-center px-24 overflow-hidden">
       <div className="w-full min-h-screen px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <header className="relative z-20">
           <p
@@ -116,7 +116,7 @@ export default function ProductDesktop() {
           </p>
         </div>
       </div>
-      <div className="relative w-full min-h-screen flex flex-col gap-8 items-center">
+      <div className="relative w-full min-h-screen flex flex-col gap-8 items-center mb-12">
 
         <div className="absolute rotate-8 top-90 -right-2 w-[240px] h-[263px] pointer-events-none overflow-visible">
           {/* KUBUS ATAS */}

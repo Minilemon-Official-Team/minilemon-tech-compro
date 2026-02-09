@@ -1,19 +1,19 @@
-import React from "react";
-
-const StepCard = ({ id, title, subtitle }) => {
+export default function StepCard({ id, title, subtitle, isActive, onClick }) {
   return (
-    <div className="flex flex-col gap-8">
-      <div className="rounded-2xl w-44 h-44 p-16 border-4 border-white text-white text-6xl font-bold flex justify-center items-center">
+    <div className={`flex flex-col justify-center items-center gap-8 cursor-pointer group transition-all duration-500 ease-out ${isActive ? "scale-110 text-white" : "text-white/20"}`} 
+    onClick={() => onClick(id)}>
+      <div 
+        className={`rounded-2xl w-32 h-32 p-16 border-4 text-6xl font-bold flex justify-center 
+          items-center ${isActive ? "border-white" : "border-white/20"}`}
+      >
         {id}
       </div>
       <div className="flex flex-col">
-        <h3 className="font-bold text-white text-2xl leading-tight text-center">
+        <h3 className="font-bold text-2xl leading-tight text-center">
           {title}
         </h3>
-        <p className="text-white leading-relaxed text-center">{subtitle}</p>
+        <p className="leading-relaxed text-center">{subtitle}</p>
       </div>
     </div>
   );
-};
-
-export default StepCard;
+}

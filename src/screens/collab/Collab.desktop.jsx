@@ -1,8 +1,9 @@
 import FounderCard from "@/components/sections/collab/FounderCard";
 import Image from "next/image";
 import PlaygroundCard from "@/components/sections/collab/PlaygroundCard";
-import StepCard from "@/components/sections/collab/StepCard";
 import WireframeCube from "@/components/sections/collab/WireframeCube";
+import { color } from "motion";
+import StepsSection from "@/components/sections/collab/StepsSection";
 
 export default function CollabDesktop() {
   const founderDatas = [
@@ -10,16 +11,19 @@ export default function CollabDesktop() {
       id: 1,
       name: "Lorem Ipsum",
       subTitle: "Lorem Ipsum",
+      color: "#EABDF2",
     },
     {
       id: 2,
       name: "Lorem Ipsum",
       subTitle: "Lorem Ipsum",
+      color: "#03805E",
     },
     {
       id: 3,
       name: "Lorem Ipsum",
       subTitle: "Lorem Ipsum",
+      color: "#3ACA47",
     },
   ];
 
@@ -47,29 +51,6 @@ export default function CollabDesktop() {
       title: "Research & Experiments",
       description:
         "Testing bleeding-edge technologies and theoretical frameworks in the lab.",
-    },
-  ];
-
-  const stepDatas = [
-    {
-      id: 1,
-      title: "Reach Out",
-      subtitle: "Email Us Your Proposal",
-    },
-    {
-      id: 2,
-      title: "Idea Share",
-      subtitle: "Initial Discovery Call",
-    },
-    {
-      id: 3,
-      title: "Align Goals",
-      subtitle: "Strategy & Roadmap",
-    },
-    {
-      id: 4,
-      title: "Co-Launch",
-      subtitle: "Start The Project",
     },
   ];
 
@@ -135,13 +116,13 @@ export default function CollabDesktop() {
         <header className="relative z-20">
           <p
             aria-hidden="true"
-            className="absolute top-0 -left-80 text-8xl text-white/10 font-bold text-center tracking-tight"
+            className="absolute top-0 -left-80 text-8xl text-white/10 font-bold text-center tracking-tight select-none"
           >
             The Playground
           </p>
           <p
             aria-hidden="true"
-            className="absolute top-0 -right-80 text-8xl text-white/10 font-bold text-center tracking-tight"
+            className="absolute top-0 -right-80 text-8xl text-white/10 font-bold text-center tracking-tight select-none"
           >
             The Playground
           </p>
@@ -159,17 +140,17 @@ export default function CollabDesktop() {
           ))}
         </div>
       </div>
-      <div className="w-full px-6">
+      <div className="relative w-full px-6">
         <header className="relative z-20">
           <p
             aria-hidden="true"
-            className="absolute top-0 -left-146 text-8xl text-white/10 font-bold text-center tracking-tight"
+            className="absolute top-0 -left-146 text-8xl text-white/10 font-bold text-center tracking-tight select-none"
           >
             How To Collaborate
           </p>
           <p
             aria-hidden="true"
-            className="absolute top-0 -right-138 text-8xl text-white/10 font-bold text-center tracking-tight"
+            className="absolute top-0 -right-138 text-8xl text-white/10 font-bold text-center tracking-tight select-none"
           >
             How To Collaborate
           </p>
@@ -177,15 +158,25 @@ export default function CollabDesktop() {
             How To Collaborate
           </h2>
         </header>
-        <div className="flex flex-row gap-24 my-32 justify-center">
-          {stepDatas.map((data) => (
-            <StepCard
-              key={data.id}
-              id={data.id}
-              title={data.title}
-              subtitle={data.subtitle}
-            />
-          ))}
+        <StepsSection />
+
+        <div className="absolute -bottom-62 right-0 mask-[linear-gradient(to_left,black_50%,transparent_90%)]">
+          <Image
+            alt="Pattern"
+            src="/assets/product_pattern.png"
+            width={300}
+            height={300}
+            className="object-contain"
+          />
+        </div>
+        <div className="absolute -bottom-62 left-0 mask-[linear-gradient(to_right,black_50%,transparent_90%)]">
+          <Image
+            alt="Pattern"
+            src="/assets/product_pattern.png"
+            width={300}
+            height={300}
+            className="object-contain"
+          />
         </div>
       </div>
     </div>

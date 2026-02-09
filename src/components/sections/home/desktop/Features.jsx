@@ -1,0 +1,72 @@
+import { HomeFeatureCard } from '@/components/ui/Card';
+import Marquee from 'react-fast-marquee';
+import Image from 'next/image';
+
+export default function Features() {
+  const cardData = [
+    {
+      id: 1,
+      title: 'Systems Over Projects',
+      desc: 'We dont build one-offs. Every solution is conceived as part of an evolving digital ecosystem.',
+    },
+    {
+      id: 2,
+      title: 'Long-term Impact',
+      desc: 'Our metrics arent just quarters; theyre decades. We build infrastructure that lasts.',
+    },
+    {
+      id: 3,
+      title: 'Ethical Innovation',
+      desc: 'Technology should serve humanity. We prioritize privacy, security, and sustainability in every line of code.',
+    },
+    {
+      id: 4,
+      title: 'Collective Intelligence',
+      desc: 'By combining internal products with external services and open playground experiments, we create a feedback loop of innovation.',
+    },
+  ];
+
+  const slideData = [
+    'The Thinkers of Minilemon',
+    'The Thinkers of Minilemon',
+    'The Thinkers of Minilemon',
+    'The Thinkers of Minilemon',
+  ];
+
+  return (
+    <div className='relative max-w-330 2xl:max-w-400 mx-auto pb-8 mb-12'>
+      <div className='h-190 w-full -mt-18'>
+        <Image
+          src='/assets/SubtractFeatures.png'
+          alt='bg Features'
+          fill
+          className='object-center'
+        />
+      </div>
+
+      <div className='absolute p-8 top-0 w-full'>
+        <h1 className='text-(--mltBlack) ml-12 text-6xl 2xl:text-7xl font-semibold'>
+          Why We Are Different
+        </h1>
+        <div className='px-32 py-18'>
+          <HomeFeatureCard data={cardData} />
+        </div>
+        <div className='px-12'>
+          <Marquee
+            autoFill={false}
+            speed={70}
+            pauseOnHover={true}
+            className='overflow-hidden text-(--mltBlack) text-center text-4xl tracking-wide'
+          >
+            {slideData.map((text) => (
+              <p>
+                {text}
+                <span className='mx-18'>•</span>
+              </p>
+            ))}
+          </Marquee>
+        </div>
+      </div>
+    </div>
+  );
+}

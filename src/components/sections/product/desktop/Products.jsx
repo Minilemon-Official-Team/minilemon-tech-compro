@@ -1,5 +1,5 @@
-import CardProduct from "@/components/sections/product/CardProduct";
-import AnimatedCubes from "./AnimatedCubes";
+import ProductCard from "@/components/ui/Card";
+import AnimatedCubes from "../../../ui/AnimatedCubes";
 
 export default function Products() {
 
@@ -34,7 +34,7 @@ export default function Products() {
       <AnimatedCubes position={"-rotate-12 top-[56%] -left-[2%]"} />
 
       {datasCard.map((data) => (
-        <CardProduct
+        <ProductCard
           key={data.id}
           title={data.title}
           description={data.description}

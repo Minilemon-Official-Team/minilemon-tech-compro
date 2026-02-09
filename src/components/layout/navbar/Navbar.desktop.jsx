@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function NavbarDesktop() {
   return (
-    <div className='bg-(--mltBlack) px-24 py-4'>
+    <div className='bg-(--mltBlack) max-w-350 2xl:max-w-400 mx-auto py-4'>
       <div className='flex justify-between items-center'>
         <Link href='/'>
           <Image
@@ -14,8 +14,8 @@ export default function NavbarDesktop() {
           />
         </Link>
 
-        <nav className='bg-white px-18 py-4 rounded-2xl'>
-          <ul className='flex gap-24 items-center'>
+        <nav className='bg-white px-18 py-5 rounded-2xl'>
+          <ul className='flex gap-24 items-center text-lg'>
             <li>
               <Link
                 href='/product'

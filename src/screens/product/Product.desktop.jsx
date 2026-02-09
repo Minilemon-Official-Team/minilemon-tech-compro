@@ -1,32 +1,9 @@
 import Image from "next/image";
 import AnimatedText from "@/components/sections/product/AnimatedText";
-import CardProduct from "@/components/sections/product/CardProduct";
-import WireframeCube from "@/components/sections/product/WireframeCube";
+
+import Products from "@/components/sections/product/Products";
 
 export default function ProductDesktop() {
-  const datasCard = [
-    {
-      id: "citrus-os",
-      title: "CitrusOS",
-      description:
-        "A distributed runtime for high-concurrency cloud environments, prioritizing low-latency and auto-healing capabilities.",
-      features: ["Infastructure", "Production"],
-    },
-    {
-      id: "lumina-grid",
-      title: "Lumina Grid",
-      description:
-        "Real-time data visualization engine for IoT sensor networks, providing deep insights into complex physical systems.",
-      features: ["Data & AI", "Beta"],
-    },
-    {
-      id: "vertex-protocol",
-      title: "Vertex Protocol",
-      description:
-        "An encrypted communication layer designed for secure multi-party computation and private collaboration.",
-      features: ["Security", "Alpha"],
-    },
-  ];
 
   return (
     <div className="w-full mx-auto flex flex-col gap-12 items-center justify-center px-24 overflow-hidden">
@@ -132,56 +109,7 @@ export default function ProductDesktop() {
           </div>
         </div>
       </div>
-      <div className="relative w-full min-h-screen flex flex-col gap-8 items-center mb-12">
-        <div className="absolute rotate-8 top-90 -right-2 w-[240px] h-[263px] pointer-events-none overflow-visible">
-          {/* KUBUS ATAS */}
-          <div className="absolute z-30" style={{ left: "60px", top: "10px" }}>
-            <WireframeCube className="w-[120px] h-[150px] text-purple-300/80 drop-shadow-[0_0_8px_rgba(192,132,252,0.5)]" />
-          </div>
-
-          {/* KUBUS KIRI BAWAH */}
-          <div className="absolute z-20" style={{ left: "0px", top: "113px" }}>
-            <WireframeCube className="w-[120px] h-[150px] text-purple-300/80 drop-shadow-[0_0_8px_rgba(192,132,252,0.5)]" />
-          </div>
-
-          {/* KUBUS KANAN BAWAH */}
-          <div
-            className="absolute z-20"
-            style={{ left: "120px", top: "113px" }}
-          >
-            <WireframeCube className="w-[120px] h-[150px] text-purple-300/80 drop-shadow-[0_0_8px_rgba(192,132,252,0.5)]" />
-          </div>
-        </div>
-
-        <div className="absolute -rotate-12 top-[56%] -left-[2%] w-[240px] h-[263px] pointer-events-none overflow-visible">
-          {/* KUBUS ATAS */}
-          <div className="absolute z-30" style={{ left: "60px", top: "10px" }}>
-            <WireframeCube className="w-[120px] h-[150px] text-purple-300/80 drop-shadow-[0_0_8px_rgba(192,132,252,0.5)]" />
-          </div>
-
-          {/* KUBUS KIRI BAWAH */}
-          <div className="absolute z-20" style={{ left: "0px", top: "113px" }}>
-            <WireframeCube className="w-[120px] h-[150px] text-purple-300/80 drop-shadow-[0_0_8px_rgba(192,132,252,0.5)]" />
-          </div>
-
-          {/* KUBUS KANAN BAWAH */}
-          <div
-            className="absolute z-20"
-            style={{ left: "120px", top: "113px" }}
-          >
-            <WireframeCube className="w-[120px] h-[150px] text-purple-300/80 drop-shadow-[0_0_8px_rgba(192,132,252,0.5)]" />
-          </div>
-        </div>
-
-        {datasCard.map((data) => (
-          <CardProduct
-            key={data.id}
-            title={data.title}
-            description={data.description}
-            features={data.features}
-          />
-        ))}
-      </div>
+      <Products/>
     </div>
   );
 }

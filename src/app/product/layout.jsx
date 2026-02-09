@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Products | Minilemon Technology',
+  title: "Products | Minilemon Technology",
 };
 
 export default function Layout({ children }) {

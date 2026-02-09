@@ -64,3 +64,31 @@ export function HomeFeatureCard({ data }) {
     </div>
   );
 }
+
+export default function ProductCard({ title, description, features }) {
+  return (
+    <div className="rounded-2xl p-4 max-w-4xl bg-[#181818] hover:bg-[#2B2B2B] grid grid-cols-2 gap-8 transition-all duration-700 ease-out border-3 hover:border-white">
+      <Image
+        alt={title}
+        src="/assets/product_card_template.png"
+        width={400}
+        height={400}
+        className="rounded-xl object-cover w-full h-[500px]"
+      />
+      <div className="flex flex-col justify-center">
+        <h2 className="text-white font-bold text-4xl mb-8">{title}</h2>
+        <p className="text-[#B1B1B1] mb-4">{description}</p>
+        <div className="flex flex-row gap-4 mb-4">
+          {features.map((feature, index) => (
+            <ProductCardPill key={index} title={feature} />
+          ))}
+        </div>
+        <p className="text-[#EABDF2]">Technical Deep Dive</p>
+      </div>
+    </div>
+  );
+}
+
+function ProductCardPill({ title }) {
+  return <div className="p-2 text-white bg-[#0F2C7B]/50 rounded transition-color duration-700 ease-out hover:bg-[#0F2C7B]">{title}</div>;
+}

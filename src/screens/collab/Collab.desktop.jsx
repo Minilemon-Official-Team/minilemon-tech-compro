@@ -4,6 +4,7 @@ import WireframeCube from '@/components/sections/collab/WireframeCube';
 import PlaygroundCard from '@/components/sections/collab/PlaygroundCard';
 import StepCard from '@/components/sections/collab/StepCard';
 import StepsSection from '@/components/sections/collab/StepsSection';
+import AnimatedCubeStack from '@/components/sections/collab/AnimatedCubeStack';
 
 export default function CollabDesktop() {
   const founderDatas = [
@@ -128,11 +129,7 @@ export default function CollabDesktop() {
           </div>
         </div>
         <div className='flex flex-col gap-16'>
-          <WireframeCube className='w-32 h-32 text-gray-200' />
-
-          <WireframeCube className='w-32 h-32 text-gray-200' />
-
-          <WireframeCube className='w-32 h-32 text-gray-200' />
+          <AnimatedCubeStack/>
         </div>
       </div>
       <div className='w-full min-h-screen px-6'>

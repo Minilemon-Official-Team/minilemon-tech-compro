@@ -35,13 +35,13 @@ export default function About() {
             </p>
           </div>
           <div className='flex justify-center gap-18 pr-32 mt-6 2xl:mt-12'>
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col gap-4'>
               <h1 className='text-4xl 2xl:text-6xl text-center'>10+</h1>
               <p className='tracking-widest text-lg 2xl:text-2xl'>
                 Main Products
               </p>
             </div>
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col gap-4'>
               <h1 className='text-4xl 2xl:text-6xl text-center'>45+</h1>
               <p className='tracking-widest text-lg 2xl:text-2xl'>
                 Meta Partners

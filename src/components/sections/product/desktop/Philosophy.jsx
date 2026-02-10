@@ -3,17 +3,17 @@ import Image from "next/image";
 
 export default function Philosophy() {
   return (
-    <div className="w-full min-h-screen flex flex-col justify-center text-white relative py-24 overflow-hidden">
+    <div className="w-full min-h-screen flex flex-col justify-center text-white relative mb-24 py-24 overflow-hidden ">
       <div className="relative w-full max-w-350 mx-auto px-6">
         <div className="absolute -top-16 -left-4 lg:left-0 xl:left-0 2xl:left-4">
           <AnimatedText text={"OUR COMPANY"} rotate={"-rotate-4"} />
         </div>
 
-        <div className="absolute -bottom-10 -left-4 lg:left-0 xl:left-0 2xl:left-10">
+        <div className="absolute -bottom-12 -left-4 lg:left-0 xl:left-0 2xl:left-2">
           <AnimatedText text={"ABOUT"} rotate={"rotate-8"} />
         </div>
 
-        <div className="absolute -bottom-16 left-1/2 -translate-x-1/2">
+        <div className="absolute -bottom-20 left-1/2 -translate-x-1/2">
           <AnimatedText text={"PROFILE"} rotate={"-rotate-4"} />
         </div>
 

@@ -1,4 +1,4 @@
-import { HomeFeatureCard } from '@/components/ui/Card';
+import { FeatureCard } from '@/components/ui/Card';
 import Marquee from 'react-fast-marquee';
 import Image from 'next/image';
 
@@ -49,7 +49,7 @@ export default function Features() {
           Why We Are Different
         </h1>
         <div className='px-32 py-18'>
-          <HomeFeatureCard data={cardData} />
+          <FeatureCard data={cardData} />
         </div>
         <div className='px-12'>
           <Marquee

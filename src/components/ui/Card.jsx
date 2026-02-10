@@ -50,12 +50,12 @@ export function HomeEcosystemCard({ data }) {
   );
 }
 
-export function HomeFeatureCard({ data }) {
+export function FeatureCard({ data }) {
   return (
     <div className='grid grid-cols-2 gap-8'>
       {data.map((data) => (
         <div className='border p-8 text-center'>
-          <h1 className='text-2xl bg-(--mltBlack) text-white py-4 w-2/3 mx-auto font-semibold'>
+          <h1 className='text-2xl bg-(--mltBlack) text-white py-4 mx-auto font-semibold'>
             {data.title}
           </h1>
           <p className='text-lg mt-4'>{data.desc}</p>

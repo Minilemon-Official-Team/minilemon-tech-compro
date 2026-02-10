@@ -74,7 +74,7 @@ export default function Ecosystem() {
           <div className='bg-(--mltBlack) w-1/4 pt-24'>
             <div className='ml-18 '>
               <Image
-                src='/assets/polygon.png'
+                src='/assets/Polygon.png'
                 alt='Polygon'
                 width={250}
                 height={250}
@@ -83,7 +83,7 @@ export default function Ecosystem() {
             </div>
             <div className='ml-18 mt-2'>
               <Image
-                src='/assets/polygon.png'
+                src='/assets/Polygon.png'
                 alt='Polygon'
                 width={250}
                 height={250}
@@ -92,7 +92,7 @@ export default function Ecosystem() {
             </div>
             <div className='ml-18 mt-2'>
               <Image
-                src='/assets/polygon.png'
+                src='/assets/Polygon.png'
                 alt='Polygon'
                 width={250}
                 height={250}

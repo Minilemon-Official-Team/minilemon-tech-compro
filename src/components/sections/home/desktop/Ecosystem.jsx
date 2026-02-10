@@ -44,7 +44,7 @@ export default function Ecosystem() {
   };
 
   return (
-    <div className='pt-24 pb-24 overflow-x-hidden'>
+    <div className='py-24 overflow-x-hidden'>
       <div className='flex w-full justify-center gap-12 p-8 font-semibold'>
         <p className='text-6xl 2xl:text-7xl text-white/10'>The Ecosystem</p>
         <p className='text-6xl 2xl:text-7xl text-white'>The Ecosystem</p>

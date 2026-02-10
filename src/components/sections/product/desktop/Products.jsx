@@ -29,9 +29,9 @@ export default function Products() {
 
   return (
     <div className="relative w-full min-h-screen flex flex-col gap-8 items-center mb-12">
-      <AnimatedCubes position={"rotate-8 top-90 -right-2"}/>
+      <AnimatedCubes position={"rotate-8 top-90 lg:right-10 xl:right-20 2xl:right-80"}/>
 
-      <AnimatedCubes position={"-rotate-12 top-[56%] -left-[2%]"} />
+      <AnimatedCubes position={"-rotate-12 top-[56%] lg:left-10 xl:left-20 left-80"} />
 
       {datasCard.map((data) => (
         <ProductCard

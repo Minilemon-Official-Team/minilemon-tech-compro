@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <div className='max-w-330 2xl:max-w-400 mx-auto min-h-screen grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
+    <div className='max-w-280 2xl:max-w-400 mx-auto min-h-screen grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
       <header className='relative z-20'>
         <p
           aria-hidden='true'
@@ -43,7 +43,7 @@ export default function Hero() {
               willChange: 'offset-distance, transform',
             }}
             animate={{
-              offsetDistance: ['0%', '100%'],
+              offsetDistance: ['100%', '0%'],
             }}
             transition={{
               duration: 12,

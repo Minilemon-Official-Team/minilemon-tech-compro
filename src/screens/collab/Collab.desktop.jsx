@@ -3,6 +3,7 @@ import Image from 'next/image';
 import WireframeCube from '@/components/sections/collab/WireframeCube';
 import PlaygroundCard from '@/components/sections/collab/PlaygroundCard';
 import StepCard from '@/components/sections/collab/StepCard';
+import StepsSection from '@/components/sections/collab/StepsSection';
 
 export default function CollabDesktop() {
   const founderDatas = [
@@ -10,16 +11,19 @@ export default function CollabDesktop() {
       id: 1,
       name: 'Lorem Ipsum',
       subTitle: 'Lorem Ipsum',
+      color: "#EABDF2"
     },
     {
       id: 2,
       name: 'Lorem Ipsum',
       subTitle: 'Lorem Ipsum',
+      color: "#03805E"
     },
     {
       id: 3,
       name: 'Lorem Ipsum',
       subTitle: 'Lorem Ipsum',
+      color: "#3ACA47"
     },
   ];
 
@@ -97,21 +101,21 @@ export default function CollabDesktop() {
         </div>
       </div>
       <div className='w-full min-h-screen px-6 flex items-center gap-16'>
-        <div className='max-w-7xl bg-[#181818] border-2 border-white text-white px-4 grid grid-cols-[1fr_2fr] gap-12 '>
-          <div className='w-[420px] h-[560px] '>
+        <div className='max-w-7xl bg-[#181818] border-2 border-white text-white p-4 grid grid-cols-[1fr_2fr] gap-12 '>
+          <div className='w-[320px] 2xl:w-[420px] h-full'>
             <Image
               alt=''
               src='/assets/collab_playground.png'
               width={400}
               height={400}
-              className='w-full h-full object-contain'
+              className='w-full h-full object-cover'
             />
           </div>
           <div className='flex flex-col justify-center'>
-            <h2 className='text-3xl font-bold leading-tight mb-8'>
+            <h2 className='text-2xl 2xl:text-3xl font-bold leading-tight mb-8'>
               The Playground
             </h2>
-            <p className='text-xl leading-relaxed mb-2'>
+            <p className='text-lg 2xl:text-xl leading-relaxed mb-2'>
               The Playground Team is dedicated to experimentation, open-source
               initiatives, learning programs, and technology-driven social
               impact. It is our sandbox for the future.
@@ -135,17 +139,17 @@ export default function CollabDesktop() {
         <header className='relative z-20'>
           <p
             aria-hidden='true'
-            className='absolute top-0 -left-80 text-8xl text-white/10 font-bold text-center tracking-tight'
+            className='absolute top-0 lg:-left-92 xl:-left-98 2xl:-left-80 lg:text-6xl xl:text-7xl 2xl:text-8xl text-white/10 font-bold text-center tracking-tight'
           >
             The Playground
           </p>
           <p
             aria-hidden='true'
-            className='absolute top-0 -right-80 text-8xl text-white/10 font-bold text-center tracking-tight'
+            className='absolute top-0 lg:-right-92 xl:-right-98 2xl:-right-80 lg:text-6xl xl:text-7xl 2xl:text-8xl text-white/10 font-bold text-center tracking-tight'
           >
             The Playground
           </p>
-          <h2 className='text-8xl text-white font-bold text-center tracking-tight'>
+          <h2 className='lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-bold text-center tracking-tight'>
             The Playground
           </h2>
         </header>
@@ -163,29 +167,22 @@ export default function CollabDesktop() {
         <header className='relative z-20'>
           <p
             aria-hidden='true'
-            className='absolute top-0 -left-146 text-8xl text-white/10 font-bold text-center tracking-tight'
+            className='absolute top-0 lg:-left-128 xl:-left-142 2xl:-left-146 lg:text-6xl xl:text-7xl 2xl:text-8xl text-white/10 font-bold text-center tracking-tight'
           >
             How To Collaborate
           </p>
           <p
             aria-hidden='true'
-            className='absolute top-0 -right-138 text-8xl text-white/10 font-bold text-center tracking-tight'
+            className='absolute top-0 lg:-right-128 xl:-right-142 2xl:-right-146 lg:text-6xl xl:text-7xl 2xl:text-8xl text-white/10 font-bold text-center tracking-tight'
           >
             How To Collaborate
           </p>
-          <h2 className='text-8xl text-white font-bold text-center tracking-tight'>
+          <h2 className='lg:text-6xl xl:text-7xl 2xl:text-8xl text-white font-bold text-center tracking-tight'>
             How To Collaborate
           </h2>
         </header>
         <div className='flex flex-row gap-24 my-32 justify-center'>
-          {stepDatas.map((data) => (
-            <StepCard
-              key={data.id}
-              id={data.id}
-              title={data.title}
-              subtitle={data.subtitle}
-            />
-          ))}
+          <StepsSection/>
         </div>
       </div>
     </div>

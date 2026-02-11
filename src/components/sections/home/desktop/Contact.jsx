@@ -13,26 +13,30 @@ export default function Contact() {
         />
       </div>
 
-      <div className='absolute top-100 left-0 right-0 max-w-330 2xl:max-w-400 mx-auto grid grid-cols-2 gap-12 text-white'>
-        <div>
-          <h1 className='text-6xl 2xl:text-7xl font-semibold'>
-            Get In <span className='text-(--mltYellow)'>Touch</span>{' '}
-          </h1>
-          <p className='text-lg text-justify mt-8 leading-relaxed'>
-            We are open to conversations around products, services, and
-            collaborative initiatives. Whether you are a partner, collaborator,
-            or institution, we welcome meaningful discussions.
-          </p>
-        </div>
-        <div className='flex flex-col gap-6'>
-          <button className='flex justify-center items-center gap-4 border border-white py-6 rounded-lg text-4xl'>
-            Email
-            <MessageSquareText className='w-12 h-10' />
-          </button>
-          <button className='flex justify-center items-center gap-4 border border-white py-6 rounded-lg text-4xl'>
-            WhatsApp
-            <Phone className='w-12 h-10' />
-          </button>
+      <div className='absolute inset-0 top-70 xl:top-80 2xl:top-90'>
+        <div className='w-full px-20'>
+          <div className='max-w-310 2xl:max-w-400 3xl:max-w-440 mx-auto grid grid-cols-2 gap-18 text-white'>
+            <div className='mt-4 2xl:mt-8'>
+              <h1 className='text-6xl xl:text-7xl 2xl:text-8xl 3xl:text-9xl font-semibold'>
+                Get In <span className='text-(--mltYellow)'>Touch</span>{' '}
+              </h1>
+              <p className='text-lg 2xl:text-xl 3xl:text-2xl text-justify mt-8 2xl:mt-12 leading-relaxed'>
+                We are open to conversations around products, services, and
+                collaborative initiatives. Whether you are a partner,
+                collaborator, or institution, we welcome meaningful discussions.
+              </p>
+            </div>
+            <div className='flex flex-col gap-6'>
+              <button className='flex justify-center items-center gap-4 border border-white py-8 2xl:py-13 rounded-lg text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-6xl'>
+                Email
+                <MessageSquareText className='w-18 h-12' />
+              </button>
+              <button className='flex justify-center items-center gap-4 border border-white py-8 2xl:py-13 rounded-lg text-3xl xl:text-4xl 2xl:text-5xl 3xl:text-6xl'>
+                WhatsApp
+                <Phone className='w-18 h-12' />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -3,8 +3,8 @@ export function Instagram() {
     <div>
       <svg
         xmlns='http://www.w3.org/2000/svg'
-        width='32'
-        height='32'
+        width='60'
+        height='60'
         viewBox='0 0 256 256'
       >
         <g fill='none'>
@@ -61,8 +61,8 @@ export function Whatsapp() {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      width='32'
-      height='32.25'
+      width='60'
+      height='60.50'
       viewBox='0 0 256 258'
     >
       <defs>
@@ -107,8 +107,8 @@ export function Facebook() {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      width='32'
-      height='32'
+      width='60'
+      height='60'
       viewBox='0 0 256 256'
     >
       <path

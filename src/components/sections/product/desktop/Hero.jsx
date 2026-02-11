@@ -1,20 +1,20 @@
+import AnimatedStackedCards from '@/components/ui/AnimatedStackedCards';
 import { motion } from 'motion/react';
-import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <div className='max-w-280 2xl:max-w-400 mx-auto min-h-screen grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
-      <header className='relative z-20'>
+    <div className='max-w-280 2xl:max-w-400 mx-auto min-h-screen grid grid-cols-1 lg:grid-cols-2 gap-12 items-center overflow-visible'>
+      <header className='relative z-20 px-12 xl:px-0'>
         <p
           aria-hidden='true'
-          className='absolute -top-28 left-0 text-8xl tracking-tight text-white/10 select-none'
+          className='absolute -top-20 xl:-top-24 left-12 xl:left-0 text-7xl xl:text-8xl tracking-tight text-white/10 select-none'
         >
           PRODUCTS
         </p>
-        <h2 className='relative text-8xl font-bold tracking-tight text-white mb-8'>
+        <h2 className='relative text-7xl xl:text-8xl font-bold tracking-tight text-white mb-8'>
           PRODUCTS
         </h2>
-        <p className='text-white text-xl mb-4'>
+        <p className='text-white text-lg xl:text-xl mb-4'>
           Designed As Systems. Built For The Long Term.
         </p>
         <div className='flex flex-row items-center gap-4'>
@@ -29,7 +29,7 @@ export default function Hero() {
         </div>
       </header>
       <div className='relative flex justify-center h-[600px]'>
-        <div className='absolute top-1/5 left-1/2 -translate-x-1/2 w-[112%] h-[380px] border-2 border-white rounded-[100%] overflow-hidden'>
+        <div className='absolute top-1/5 -left-12 xl:left-1/2 xl:-translate-x-1/2 w-[100%] 2xl:w-[100%] h-[380px] border-2 border-white rounded-[100%] overflow-hidden'>
           <motion.div
             className='absolute top-0 left-0 w-240 h-[6px] z-30 bg-gradient-to-r from-transparent via-white to-transparent'
             style={{
@@ -52,25 +52,7 @@ export default function Hero() {
             }}
           />
         </div>
-        <div className='relative w-[420px] h-[360px] translate-y-16'>
-          {/* LAYER 1 */}
-          <div className='absolute inset-0 bg-slate-800 rounded-[40px] transform -rotate-12 scale-90 -translate-x-12 -translate-y-4 shadow-2xl z-0 opacity-60 border border-white/10' />
-
-          {/* LAYER 2 */}
-          <div className='absolute inset-0 bg-slate-700 rounded-[40px] transform rotate-10 scale-95 shadow-2xl z-10 translate-x-8 -translate-y-4 opacity-80 border border-white/10' />
-
-          {/* LAYER 3 */}
-          <div className='absolute inset-0 z-20 rounded-[40px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/5'>
-            <Image
-              src='/assets/product_frame.png'
-              alt='Product Preview'
-              width={600}
-              height={600}
-              className='w-full h-full object-cover'
-            />
-            <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none' />
-          </div>
-        </div>
+        <AnimatedStackedCards/>
       </div>
     </div>
   );

@@ -34,37 +34,39 @@ export default function Features() {
   ];
 
   return (
-    <div className='relative max-w-330 2xl:max-w-400 mx-auto pb-8 mb-12'>
-      <div className='h-190 w-full -mt-18'>
-        <Image
-          src='/assets/SubtractFeatures.png'
-          alt='bg Features'
-          fill
-          className='object-center'
-        />
-      </div>
-
-      <div className='absolute p-8 top-0 w-full'>
-        <h1 className='text-(--mltBlack) ml-12 text-6xl 2xl:text-7xl font-semibold'>
-          Why We Are Different
-        </h1>
-        <div className='px-32 py-18'>
-          <FeatureCard data={cardData} />
+    <div className='w-full px-20'>
+      <div className='relative max-w-310 2xl:max-w-400 3xl:max-w-440 mx-auto pb-8 mb-12 mt-32'>
+        <div className='h-190 xl:h-200 2xl:h-210 3xl:h-225 w-full -mt-18'>
+          <Image
+            src='/assets/SubtractFeatures.png'
+            alt='bg Features'
+            fill
+            className='object-center'
+          />
         </div>
-        <div className='px-12'>
-          <Marquee
-            autoFill={false}
-            speed={70}
-            pauseOnHover={true}
-            className='overflow-hidden text-(--mltBlack) text-center text-4xl tracking-wide'
-          >
-            {slideData.map((text) => (
-              <p>
-                {text}
-                <span className='mx-18'>•</span>
-              </p>
-            ))}
-          </Marquee>
+
+        <div className='absolute p-8 top-0 w-full'>
+          <h1 className='text-(--mltBlack) ml-12 text-5xl 2xl:text-7xl 3xl:text-8xl font-semibold'>
+            Why We Are Different
+          </h1>
+          <div className='px-32 2xl:px-46 mt-18 mb-18'>
+            <FeatureCard data={cardData} />
+          </div>
+          <div className='px-12'>
+            <Marquee
+              autoFill={false}
+              speed={70}
+              pauseOnHover={true}
+              className='overflow-hidden text-(--mltBlack) tracking-wide mb-12'
+            >
+              {slideData.map((text) => (
+                <p className='text-center text-4xl xl:text-5xl 2xl:text-6xl 3xl:text-7xlt-'>
+                  {text}
+                  <span className='mx-18'>•</span>
+                </p>
+              ))}
+            </Marquee>
+          </div>
         </div>
       </div>
     </div>

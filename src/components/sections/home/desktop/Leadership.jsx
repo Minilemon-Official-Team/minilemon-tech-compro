@@ -33,29 +33,37 @@ export default function Leadership() {
   ];
 
   return (
-    <div className='w-full overflow-hidden py-12'>
-      <div className='flex w-full justify-center gap-44 p-8 font-semibold'>
-        <p className='text-6xl 2xl:text-7xl text-white'>Our Leadership</p>
-        <p className='text-6xl 2xl:text-7xl text-white/10'>Our Team</p>
-        <p className='text-6xl 2xl:text-7xl text-white/10'>Our Family</p>
+    <div className='overflow-hidden my-24'>
+      <div className='flex w-full justify-center font-semibold gap-32 xl:gap-36 2xl:gap-24 3xl:gap-8'>
+        <p className='text-5xl 2xl:text-7xl 3xl:text-8xl text-white'>
+          Our Leadership
+        </p>
+        <p className='text-5xl 2xl:text-7xl 3xl:text-8xl text-white/10'>
+          Our Team
+        </p>
+        <p className='text-5xl 2xl:text-7xl 3xl:text-8xl text-white/10'>
+          Our Family
+        </p>
       </div>
-      <div className='max-w-330 2xl:max-w-400 mx-auto'>
-        <div className='my-12'>
-          <HomePhotoCard data={cardData} />
+      <div className='w-full px-20'>
+        <div className='max-w-310 2xl:max-w-400 3xl:max-w-440 mx-auto'>
+          <div className='mt-24'>
+            <HomePhotoCard data={cardData} />
+          </div>
+          <Marquee
+            autoFill={false}
+            speed={70}
+            pauseOnHover={true}
+            className='overflow-hidden tracking-wide py-8 mt-14'
+          >
+            {slideData.map((text) => (
+              <p className='text-white text-center text-4xl 3xl:text-5xl'>
+                {text}
+                <span className='mx-18'>•</span>
+              </p>
+            ))}
+          </Marquee>
         </div>
-        <Marquee
-          autoFill={false}
-          speed={70}
-          pauseOnHover={true}
-          className='overflow-hidden text-white text-center text-4xl tracking-wide py-4'
-        >
-          {slideData.map((text) => (
-            <p>
-              {text}
-              <span className='mx-18'>•</span>
-            </p>
-          ))}
-        </Marquee>
       </div>
     </div>
   );

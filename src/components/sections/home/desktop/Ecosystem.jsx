@@ -48,31 +48,20 @@ export default function Ecosystem() {
 
   return (
     <div className='py-24 overflow-x-hidden'>
-      {/* <div className='flex w-full justify-center font-semibold 2xl:gap-28 3xl:gap-6'>
-        <p className='text-5xl 2xl:text-7xl 3xl:text-8xl text-white/10'>
-          Ecosystem
-        </p>
-        <p className='text-5xl 2xl:text-7xl 3xl:text-8xl text-white'>
-          The Ecosystem
-        </p>
-        <p className='text-5xl 2xl:text-7xl 3xl:text-8xl text-white/10'>
-          The Ecosyst
-        </p>
-      </div> */}
       <header className='relative z-20'>
         <p
           aria-hidden='true'
-          className='absolute top-0 -left-10 2xl:-left-30 3xl:-left-50 text-6xl 2xl:text-7xl 3xl:text-8xl text-white/10 font-bold text-center tracking-tight'
+          className='absolute top-0 -lsemieft-10 2xl:-left-30 3xl:-left-50 text-6xl 2xl:text-7xl 3xl:text-8xl text-white/10 font-semibold text-center tracking-tight'
         >
           The Ecosystem
         </p>
         <p
           aria-hidden='true'
-          className='absolute top-0 -right-10 2xl:-right-30 3xl:-right-50 text-6xl 2xl:text-7xl 3xl:text-8xl text-white/10 font-bold text-center tracking-tight'
+          className='absolute top-0 -right-10 2xl:-right-30 3xl:-right-50 text-6xl 2xl:text-7xl 3xl:text-8xl text-white/10 font-semibold text-center tracking-tight'
         >
           The Ecosystem
         </p>
-        <h2 className='text-6xl 2xl:text-7xl 3xl:text-8xl text-white font-bold text-center tracking-tight'>
+        <h2 className='text-6xl 2xl:text-7xl 3xl:text-8xl text-white font-semibold text-center tracking-tight'>
           The Ecosystem
         </h2>
       </header>

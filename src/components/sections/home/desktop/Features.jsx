@@ -60,7 +60,7 @@ export default function Features() {
               className='overflow-hidden text-(--mltBlack) tracking-wide mb-12'
             >
               {slideData.map((text) => (
-                <p className='text-center text-4xl xl:text-5xl 2xl:text-6xl 3xl:text-7xlt-'>
+                <p className='text-center text-4xl 2xl:text-5xl mt-3'>
                   {text}
                   <span className='mx-18'>•</span>
                 </p>

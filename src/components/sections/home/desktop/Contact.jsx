@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Contact() {
   return (
-    <div className='relative h-[90vh]'>
+    <div className='relative h-[90vh] 2xl:mb-32'>
       <div className='absolute h-full w-6/8 top-0 -left-30 scale-100'>
         <Image
           src='/assets/Ellipse.png'

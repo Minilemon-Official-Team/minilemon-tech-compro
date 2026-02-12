@@ -1,17 +1,37 @@
+'use client';
+
 import Image from 'next/image';
 import { useState } from 'react';
 
 export function HomePhotoCard({ data }) {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <div className='flex justify-center items-center gap-4 '>
+    <div className='flex justify-center items-center gap-4'>
       {data.map((data) => (
-        <div className='relative w-full h-110 2xl:h-120' key={data.id}>
+        <div
+          className='relative w-full h-110 2xl:h-120'
+          key={data.id}
+          onMouseEnter={() => setIsHovered(data.id)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           <Image
             src={data.src}
             alt={data.alt}
             fill
-            className='object-cover rounded-2xl'
+            className='absolute object-cover rounded-2xl'
           />
+          <div
+            className={`absolute inset-0 bg-black transition-opacity duration-500 ${
+              isHovered === data.id ? 'opacity-50' : 'opacity-0'
+            }`}
+          />
+          <div
+            className={`${isHovered === data.id ? 'opacity-100 visible' : 'opacity-0 invisible'} absolute inset-0 flex flex-col items-center justify-center text-white z-10 transition-opacity duration-500`}
+          >
+            <h3 className='text-2xl font-semibold mb-1'>Lorem Ipsum</h3>
+            <p className='text-lg opacity-90'>Founder</p>
+          </div>
         </div>
       ))}
     </div>
@@ -56,14 +76,55 @@ export function HomeEcosystemCard({ data }) {
 }
 
 export function FeatureCard({ data }) {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <div className='grid grid-cols-2 gap-8 2xl:gap-12'>
       {data.map((data) => (
-        <div className='border p-8 text-center'>
-          <h1 className='text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl bg-(--mltBlack) text-white py-4 mx-auto font-semibold'>
+        <div
+          key={data.id}
+          className='relative border p-8 text-center'
+          onMouseEnter={() => setIsHovered(data.id)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <div
+            className={`${isHovered === data.id ? 'h-[60%] xl:h-1/2 2xl:h-[55%]' : 'h-0'} absolute bottom-0 left-0 w-full bg-(--mltBlack) z-0 transition-[height] duration-400 ease-in-out`}
+          />
+          <h1 className='relative text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl bg-(--mltBlack) text-white py-4 mx-auto'>
             {data.title}
           </h1>
-          <p className='text-md xl:text-lg 2xl:text-xl 3xl:text-2xl mt-4'>
+          <p
+            className={`${isHovered === data.id ? 'text-white' : 'text-black'} relative text-md xl:text-lg 2xl:text-xl 3xl:text-2xl mt-4 transition-colors duration-300`}
+          >
+            {data.desc}
+          </p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export function ScopeCard({ data }) {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div className='grid grid-cols-2 gap-8 2xl:gap-12'>
+      {data.map((data) => (
+        <div
+          key={data.id}
+          className='relative border p-8 text-center'
+          onMouseEnter={() => setIsHovered(data.id)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <div
+            className={`${isHovered === data.id ? 'h-[45%] xl:h-1/2 2xl:h-[48%]' : 'h-0'} absolute bottom-0 left-0 w-full bg-(--mltBlack) z-0 transition-[height] duration-400 ease-in-out`}
+          />
+          <h1 className='relative text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl bg-(--mltBlack) text-white py-4 mx-auto'>
+            {data.title}
+          </h1>
+          <p
+            className={`${isHovered === data.id ? 'text-white' : 'text-black'} relative text-md xl:text-lg 2xl:text-xl 3xl:text-2xl mt-4 transition-colors duration-300`}
+          >
             {data.desc}
           </p>
         </div>

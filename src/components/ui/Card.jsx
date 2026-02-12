@@ -133,12 +133,12 @@ export function ScopeCard({ data }) {
   );
 }
 
-export default function ProductCard({ title, description, features }) {
+export default function ProductCard({ image, title, description, features, tagline }) {
   return (
     <div className='rounded-2xl p-4 max-w-4xl bg-[#181818] hover:bg-[#2B2B2B] grid grid-cols-2 gap-8 transition-all duration-700 ease-out border-3 hover:border-white'>
       <Image
         alt={title}
-        src='/assets/product_card_template.png'
+        src={image}
         width={400}
         height={400}
         className='rounded-xl object-cover w-full h-[500px]'
@@ -151,7 +151,7 @@ export default function ProductCard({ title, description, features }) {
             <ProductCardPill key={index} title={feature} />
           ))}
         </div>
-        <p className='text-[#EABDF2]'>Technical Deep Dive</p>
+        <p className='text-[#EABDF2]'>{tagline}</p>
       </div>
     </div>
   );

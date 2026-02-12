@@ -5,9 +5,9 @@ import { motion, useMotionValue, useTransform } from 'motion/react';
 import Image from 'next/image';
 
 const CARDS = [
-  { id: 1, image: '/assets/product_frame.png' },
-  { id: 2, image: '/assets/product_frame_2.png' },
-  { id: 3, image: '/assets/product_frame_3.png' },
+  { id: 1, image: '/assets/MLS.png' },
+  { id: 2, image: '/assets/Minilemon Space.png' },
+  { id: 3, image: '/assets/Hicare.png' },
 ];
 
 export default function AnimatedStackedCards() {

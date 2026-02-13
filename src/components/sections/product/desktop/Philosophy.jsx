@@ -42,9 +42,9 @@ export default function Philosophy() {
             <span className="text-[#FFDD10] font-bold">
               Core Team Philosophy
             </span>{" "}
-            The Core Team operates as Minilemon Technology&apos;s product
-            engine. They are responsible for research, design, development, and
-            long-term maintenance of original products.
+            Core Team Philosophy The Core Team operates as Minilemon
+            Technology’s product engine. They are responsible for research,
+            design, development, and long-term maintenance of original products.
           </p>
           <p>
             We don&apos;t build based on hype cycles. Our roadmap is driven by

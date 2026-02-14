@@ -40,7 +40,7 @@ export default function Hero() {
           </div>
         </header>
 
-        <div className='relative flex justify-center h-[600px]'>
+        <div className='relative z-50 flex justify-center h-[600px]'>
           <div className='absolute top-1/5 -left-12 xl:left-1/2 xl:-translate-x-1/2 w-[100%] 2xl:w-[100%] h-[380px] border-2 border-white rounded-[100%] overflow-hidden'>
             <motion.div
               className='absolute top-0 left-0 w-240 h-[6px] z-30 bg-gradient-to-r from-transparent via-white to-transparent'

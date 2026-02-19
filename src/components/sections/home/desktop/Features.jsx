@@ -35,7 +35,7 @@ export default function Features() {
 
   return (
     <div className='w-full px-20'>
-      <div className='relative max-w-310 2xl:max-w-400 3xl:max-w-440 mx-auto pb-8 mb-12 mt-32'>
+      <div className='relative max-w-310 2xl:max-w-400 3xl:max-w-440 mx-auto pb-8 mb-12 mt-24'>
         <div className='h-190 xl:h-200 2xl:h-210 3xl:h-225 w-full -mt-18'>
           <Image
             src='/assets/SubtractFeatures.png'

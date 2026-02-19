@@ -40,7 +40,7 @@ export function HomePhotoCard({ data }) {
 
 export function HomeEcosystemCard({ data }) {
   return (
-    <div className='rounded-[40px] p-5 bg-[#181818] xl:w-5xl 2xl:w-6xl 3xl:w-7xl xl:h-145 2xl:h-150 3xl:h-165'>
+    <div className='rounded-[40px] p-5 bg-[#181818] xl:w-4xl 2xl:w-6xl 3xl:w-7xl xl:h-145 2xl:h-150 3xl:h-165'>
       <div className='flex justify-center items-center gap-8 2xl:gap-10'>
         <Image
           alt='Card Img'
@@ -59,7 +59,7 @@ export function HomeEcosystemCard({ data }) {
           <div className='flex flex-row gap-4 mb-6 2xl:mb-10'>
             {data.tag.map((tag) => (
               <div
-                className='p-2 2xl:p-3 text-white text-lg 2xl:text-xl 3xl:text-2xl bg-[#0F2C7B]/50 rounded-xl'
+                className='p-2 2xl:p-3 text-white text-md 2xl:text-xl 3xl:text-2xl bg-[#0F2C7B]/50 rounded-xl'
                 key={tag.id}
               >
                 {tag}
@@ -133,7 +133,13 @@ export function ScopeCard({ data }) {
   );
 }
 
-export default function ProductCard({ image, title, description, features, tagline }) {
+export default function ProductCard({
+  image,
+  title,
+  description,
+  features,
+  tagline,
+}) {
   return (
     <div className='rounded-2xl p-4 max-w-4xl bg-[#181818] hover:bg-[#2B2B2B] grid grid-cols-2 gap-8 transition-all duration-700 ease-out border-3 hover:border-white'>
       <Image

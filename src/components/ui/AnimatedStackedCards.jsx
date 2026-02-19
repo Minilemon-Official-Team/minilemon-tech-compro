@@ -25,8 +25,8 @@ export default function AnimatedStackedCards() {
   return (
     <div className="flex min-h-[600px] w-full items-center justify-center overflow-visible py-20">
       <div className="relative 
-      w-[260px] h-[360px] md:w-[380px] md:h-[360px] xl:w-[400px] xl:h-[380px] 2xl:w-[520px] 2xl:h-[500px]
-      -translate-y-12 xl:-translate-y-12 2xl:-translate-y-28 right-12 xl:right-0"
+      w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] md:w-[380px] md:h-[360px] xl:w-[400px] xl:h-[380px] 2xl:w-[520px] 2xl:h-[500px]
+      -translate-y-36 min-[520px]:-translate-y-42 sm:-translate-y-32 md:-translate-y-28 lg:-translate-y-12 xl:-translate-y-12 2xl:-translate-y-28 right-0 lg:right-12 xl:right-0"
       >
         {cards.map((card, index) => {
           return (

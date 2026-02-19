@@ -11,34 +11,16 @@ const basePhysics = {
 
 const topCubeTransition = {
   ...basePhysics,
-  y: {
-    ...basePhysics,
-    delay: 0,
-  },
-  x: {
-    ...basePhysics,
-    delay: 0.1,
-  },
-  rotate: {
-    ...basePhysics,
-    delay: 0.1,
-  },
+  y: { ...basePhysics, delay: 0 },
+  x: { ...basePhysics, delay: 0.1 },
+  rotate: { ...basePhysics, delay: 0.1 },
 };
 
 const sideCubeTransition = {
   ...basePhysics,
-  x: {
-    ...basePhysics,
-    delay: 0,
-  },
-  y: {
-    ...basePhysics,
-    delay: 0.1,
-  },
-  rotate: {
-    ...basePhysics,
-    delay: 0.1,
-  },
+  x: { ...basePhysics, delay: 0 },
+  y: { ...basePhysics, delay: 0.1 },
+  rotate: { ...basePhysics, delay: 0.1 },
 };
 
 const topCubeVariants = {
@@ -67,26 +49,11 @@ function WireframeCube({ className, color = "currentColor" }) {
         xmlns="http://www.w3.org/2000/svg"
       >
         {/* ATAS */}
-        <path
-          d="M 75 0 L 150 43 L 75 86 L 0 43 Z"
-          fill="transparent"
-          stroke={color}
-          strokeWidth="2"
-        />
+        <path d="M 75 0 L 150 43 L 75 86 L 0 43 Z" fill="transparent" stroke={color} strokeWidth="2" />
         {/* KIRI */}
-        <path
-          d="M 0 43 L 0 129 L 75 172 L 75 86 Z"
-          fill="transparent"
-          stroke={color}
-          strokeWidth="2"
-        />
+        <path d="M 0 43 L 0 129 L 75 172 L 75 86 Z" fill="transparent" stroke={color} strokeWidth="2" />
         {/* KANAN */}
-        <path
-          d="M 75 86 L 75 172 L 150 129 L 150 43 Z"
-          fill="transparent"
-          stroke={color}
-          strokeWidth="2"
-        />
+        <path d="M 75 86 L 75 172 L 150 129 L 150 43 Z" fill="transparent" stroke={color} strokeWidth="2" />
       </svg>
     </div>
   );
@@ -95,7 +62,7 @@ function WireframeCube({ className, color = "currentColor" }) {
 export default function AnimatedCubes({ position }) {
   return (
     <motion.div
-      className={`absolute ${position} w-[240px] h-[263px] overflow-visible cursor-pointer`}
+      className={`absolute ${position} origin-center scale-[0.6] sm:scale-75 md:scale-100 w-[240px] h-[263px] overflow-visible cursor-pointer`}
       initial="expanded"
       whileHover="clustered"
       animate="expanded"

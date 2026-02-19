@@ -3,8 +3,11 @@ import { myFont } from "@/app/fonts";
 
 export default function AnimatedText({ text, rotate }) {
   return (
+    // min-[420px]:top-2 min-[520px]:-top-9 min-[600px]:-top-2 min-[800px]:top-16
     <h2
-      className={`${myFont.className} flex flex-wrap sm:text-[40px] md:text-[80px] lg:text-[90px] xl:text-[100px] leading-none select-none ${rotate}`}
+      className={`${myFont.className} flex flex-wrap 
+      min-[320px]:text-[32px] min-[520px]:text-[48px] 
+      sm:text-[40px] md:text-[80px] lg:text-[90px] xl:text-[100px] leading-none select-none ${rotate}`}
     >
       {text.split(" ").map((word, wordIndex) => (
         <div key={wordIndex} className="inline-block mr-4 last:mr-0">

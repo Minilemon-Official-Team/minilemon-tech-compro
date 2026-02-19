@@ -141,17 +141,17 @@ export default function ProductCard({
   tagline,
 }) {
   return (
-    <div className='rounded-2xl p-4 max-w-4xl bg-[#181818] hover:bg-[#2B2B2B] grid grid-cols-2 gap-8 transition-all duration-700 ease-out border-3 hover:border-white'>
+    <div className='rounded-2xl p-4 max-w-4xl bg-[#181818] hover:bg-[#2B2B2B] grid grid-cols-1 lg:grid-cols-2 gap-8 transition-all duration-700 ease-out border-3 hover:border-white'>
       <Image
         alt={title}
         src={image}
         width={400}
         height={400}
-        className='rounded-xl object-cover w-full h-[500px]'
+        className='rounded-xl object-cover w-full h-[360px] lg:h-[500px]'
       />
       <div className='flex flex-col justify-center'>
-        <h2 className='text-white font-bold text-4xl mb-8'>{title}</h2>
-        <p className='text-[#B1B1B1] mb-4'>{description}</p>
+        <h2 className='text-white font-bold text-2xl lg:text-4xl mb-8'>{title}</h2>
+        <p className='text-[#B1B1B1] text-sm lg:text-lg mb-4'>{description}</p>
         <div className='flex flex-row gap-4 mb-4'>
           {features.map((feature, index) => (
             <ProductCardPill key={index} title={feature} />
@@ -165,7 +165,7 @@ export default function ProductCard({
 
 function ProductCardPill({ title }) {
   return (
-    <div className='p-2 text-white bg-[#0F2C7B]/50 rounded transition-color duration-700 ease-out hover:bg-[#0F2C7B]'>
+    <div className='py-1 px-2 lg:p-2 text-xs lg:text-sm text-white bg-[#0F2C7B]/50 rounded transition-colors duration-700 ease-out hover:bg-[#0F2C7B] whitespace-nowrap cursor-default'>
       {title}
     </div>
   );

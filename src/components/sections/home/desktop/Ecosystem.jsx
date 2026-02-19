@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { HomeEcosystemCard } from '@/components/ui/Card';
 import { Play } from 'lucide-react';
+import { AnimatedTrianglePolygon } from '@/components/ui/AnimatedTriangle';
 import Image from 'next/image';
 
 export default function Ecosystem() {
@@ -47,7 +48,7 @@ export default function Ecosystem() {
   };
 
   return (
-    <div className='py-24 overflow-x-hidden'>
+    <div className='pt-24 overflow-x-hidden'>
       <header className='relative z-20'>
         <p
           aria-hidden='true'
@@ -84,8 +85,8 @@ export default function Ecosystem() {
                 />
               </div>
             </div>
-            <div className='bg-(--mltBlack) w-1/4 pt-24'>
-              <div className='ml-18 '>
+            <div className='bg-(--mltBlack) w-1/4 px-12'>
+              {/* <div className='ml-18 '>
                 <Image
                   src='/assets/Polygon.png'
                   alt='Polygon'
@@ -102,8 +103,11 @@ export default function Ecosystem() {
                   height={250}
                   className='object-contain'
                 />
-              </div>
-              <div className='ml-18 mt-2'>
+              </div> */}
+              <AnimatedTrianglePolygon />
+              <AnimatedTrianglePolygon />
+              <AnimatedTrianglePolygon />
+              {/* <div className='ml-18 mt-2'>
                 <Image
                   src='/assets/Polygon.png'
                   alt='Polygon'
@@ -111,7 +115,7 @@ export default function Ecosystem() {
                   height={250}
                   className='object-contain'
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

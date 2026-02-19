@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import AnimatedTriangle from '@/components/ui/AnimatedTriangle';
+import { AnimatedTriangle } from '@/components/ui/AnimatedTriangle';
 
 export default function Team() {
   return (

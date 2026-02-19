@@ -173,8 +173,8 @@ function ProductCardPill({ title }) {
 
 export function PlaygroundCard({ title, description }) {
   return (
-    <div className='group max-w-80 min-h-92 p-2 border-2 transition-all duration-500 hover:border-white'>
-      <div className='bg-white p-8 flex flex-col justify-center gap-4 w-full h-full group-hover:bg-[#F5FEDD]'>
+    <div className='group w-full lg:max-w-80 min-h-92 lg:border-2 transition-all duration-500 hover:border-white'>
+      <div className='bg-white p-8 flex flex-col justify-center gap-4 w-full h-full lg:group-hover:bg-[#F5FEDD]'>
         <h3 className='font-bold leading-tight text-3xl'>{title}</h3>
         <p className='italic leading-relaxed text-xl'>{description}</p>
         <a href='' className='font-bold'>
@@ -185,34 +185,35 @@ export function PlaygroundCard({ title, description }) {
   );
 }
 
+
 export function FounderCard({ props }) {
   const isEven = props.id % 2 === 0;
 
   return (
     <div
-      className={`group relative flex items-center py-4 px-8 w-full max-w-4xl transition-all duration-500 ease-out border-2 hover:border-white
+      className={`group relative flex items-center py-6 px-8 sm:px-16 md:px-24 lg:px-32 w-full max-w-4xl transition-all duration-500 ease-out border-2 hover:border-white
   ${isEven ? 'flex-row-reverse text-right' : 'flex-row text-left'}`}
       style={{ backgroundColor: props.color }}
     >
       <div
-        className={`absolute -top-4 bottom-0 text-[136px] flex justify-center items-center text-black/8 tracking-tighter uppercase leading-none select-none pointer-events-none
-      ${isEven ? '-right-48' : 'left-8'}`}
+        className={`absolute top-2 lg:-top-4 bottom-0 text-[64px] sm:text-[100px] lg:text-[136px] flex justify-center items-center text-black/8 tracking-tighter uppercase leading-none select-none pointer-events-none
+      ${isEven ? '-right-8 sm:-right-24 lg:-right-48' : 'left-2 sm:left-4 lg:left-8'}`}
       >
         Founder
       </div>
 
       <div
-        className={`w-1 h-24 bg-black shrink-0 ${isEven ? 'ml-4' : 'mr-4'}`}
+        className={`w-1 h-16 sm:h-24 bg-black shrink-0 ${isEven ? 'ml-3 sm:ml-4' : 'mr-3 sm:mr-4'}`}
       ></div>
 
-      <div className='flex flex-col justify-center z-10 relative'>
-        <p className='font-bold text-2xl'>{props.name}</p>
-        <p>{props.subTitle}</p>
+      <div className='flex flex-col justify-center z-10 relative max-w-[55%] sm:max-w-none text-black'>
+        <p className='font-bold text-lg sm:text-2xl'>{props.name}</p>
+        <p className='text-sm sm:text-base'>{props.subTitle}</p>
       </div>
 
       <div
-        className={`absolute -bottom-3.5 w-48 h-48 sm:w-56 sm:h-56 z-20 transition-transform duration-500 ease-out origin-bottom group-hover:scale-110
-      ${isEven ? '-left-6 group-hover:translate-x-4' : '-right-6 group-hover:-translate-x-4'}`}
+        className={`absolute -bottom-3.5 w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 z-20 transition-transform duration-500 ease-out origin-bottom group-hover:scale-110
+      ${isEven ? '-left-2 sm:-left-6 group-hover:translate-x-4' : '-right-2 sm:-right-6 group-hover:-translate-x-4'}`}
       >
         <Image
           alt='Foto Founder'
@@ -233,16 +234,16 @@ function StepCard({ id, title, subtitle, isActive, onSelect }) {
       onClick={() => onSelect(id)}
     >
       <div
-        className={`rounded-2xl w-32 h-32 p-16 border-4 text-6xl font-bold flex justify-center 
+        className={`rounded-2xl w-32 h-32 p-16 border-4 text-4xl lg:text-6xl font-bold flex justify-center 
           items-center ${isActive ? 'border-white' : 'border-white/20'}`}
       >
         {id}
       </div>
       <div className='flex flex-col'>
-        <h3 className='font-bold text-2xl leading-tight text-center'>
+        <h3 className='font-bold text-xl lg:text-2xl leading-tight text-center'>
           {title}
         </h3>
-        <p className='leading-relaxed text-center'>{subtitle}</p>
+        <p className='leading-relaxed text-sm lg:text-lg text-center'>{subtitle}</p>
       </div>
     </div>
   );
@@ -259,7 +260,7 @@ export function StepsSection() {
   ];
 
   return (
-    <div className='flex flex-row gap-24 my-32 justify-center'>
+    <div className='grid grid-cols-2 lg:flex lg:flex-row gap-24 my-32 justify-center'>
       {stepDatas.map((data) => (
         <StepCard
           key={data.id}

@@ -1,4 +1,7 @@
+"use client";
+
 import { motion } from "motion/react";
+import { useState, useEffect } from "react";
 
 function WireframeCube({ className = "" }) {
   return (
@@ -21,28 +24,40 @@ function WireframeCube({ className = "" }) {
 }
 
 export default function AnimatedCubeStack() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 1000);
+    handleResize(); 
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const DURATION = 6;
   const REPEAT_DELAY = 2;
 
   const SEPARATION = 160; 
-  const STACK_OFFSET = 55;
+  const STACK_OFFSET_Y = 65; 
+  const STACK_OFFSET_X = 85; 
 
   const STEP_1 = SEPARATION - 35;
   const STEP_2 = SEPARATION - 70;
-  const FINAL  = STACK_OFFSET;
 
-  // Waktu
   const KEYFRAME_TIMES = [0, 0.2, 0.3, 0.5, 0.6, 0.8, 1];
+  const ZERO_ARRAY = [0, 0, 0, 0, 0, 0, 0];
 
   return (
-    <div className="relative flex flex-col items-center justify-center h-[400px] w-32">
+    <div className="relative flex flex-col items-center justify-center h-[250px] md:h-[400px] w-full md:w-32">
       
-      {/* CUBE ATAS */}
+      {/* CUBE ATAS / KIRI */}
       <motion.div
+        key={isMobile ? "mobile-top" : "desktop-top"}
         className="absolute z-30"
-        animate={{ 
-          y: [-SEPARATION, -SEPARATION, -STEP_1, -STEP_1, -STEP_2, -STEP_2, -FINAL] 
-        }}
+        animate={
+          isMobile
+            ? { x: [-SEPARATION, -SEPARATION, -STEP_1, -STEP_1, -STEP_2, -STEP_2, -STACK_OFFSET_X], y: ZERO_ARRAY }
+            : { y: [-SEPARATION, -SEPARATION, -STEP_1, -STEP_1, -STEP_2, -STEP_2, -STACK_OFFSET_Y], x: ZERO_ARRAY }
+        }
         transition={{
           duration: DURATION,
           ease: "easeInOut",
@@ -51,14 +66,14 @@ export default function AnimatedCubeStack() {
           times: KEYFRAME_TIMES
         }}
       >
-        <WireframeCube className="w-32 h-32 text-gray-200" />
+        <WireframeCube className="w-24 h-24 md:w-32 md:h-32 text-gray-200" />
       </motion.div>
 
       {/* CUBE TENGAH */}
       <motion.div
+        key={isMobile ? "mobile-mid" : "desktop-mid"}
         className="absolute z-20"
         animate={{ 
-          // Rotation
           rotate: [0, 180, 180, 360, 360, 360, 360], 
         }}
         transition={{
@@ -69,15 +84,18 @@ export default function AnimatedCubeStack() {
           times: KEYFRAME_TIMES
         }}
       >
-        <WireframeCube className="w-32 h-32 text-gray-200" />
+        <WireframeCube className="w-24 h-24 md:w-32 md:h-32 text-gray-200" />
       </motion.div>
 
-      {/* CUBE BAWAH */}
+      {/* CUBE BAWAH / KANAN */}
       <motion.div
+        key={isMobile ? "mobile-bot" : "desktop-bot"}
         className="absolute z-10"
-        animate={{ 
-          y: [SEPARATION, SEPARATION, STEP_1, STEP_1, STEP_2, STEP_2, FINAL] 
-        }}
+        animate={
+          isMobile
+            ? { x: [SEPARATION, SEPARATION, STEP_1, STEP_1, STEP_2, STEP_2, STACK_OFFSET_X], y: ZERO_ARRAY }
+            : { y: [SEPARATION, SEPARATION, STEP_1, STEP_1, STEP_2, STEP_2, STACK_OFFSET_Y], x: ZERO_ARRAY }
+        }
         transition={{
           duration: DURATION,
           ease: "easeInOut",
@@ -86,7 +104,7 @@ export default function AnimatedCubeStack() {
           times: KEYFRAME_TIMES
         }}
       >
-        <WireframeCube className="w-32 h-32 text-gray-200" />
+        <WireframeCube className="w-24 h-24 md:w-32 md:h-32 text-gray-200" />
       </motion.div>
 
     </div>

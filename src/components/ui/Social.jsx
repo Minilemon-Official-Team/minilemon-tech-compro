@@ -3,9 +3,8 @@ export function Instagram() {
     <div>
       <svg
         xmlns='http://www.w3.org/2000/svg'
-        width='60'
-        height='60'
         viewBox='0 0 256 256'
+        className='w-10 h-10 md:w-[60px] md:h-[60px]'
       >
         <g fill='none'>
           <rect
@@ -61,9 +60,8 @@ export function Whatsapp() {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      width='60'
-      height='60.50'
       viewBox='0 0 256 258'
+      className='w-10 h-10 md:w-[60px] md:h-[60.5px]'
     >
       <defs>
         <linearGradient
@@ -107,9 +105,8 @@ export function Facebook() {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      width='60'
-      height='60'
       viewBox='0 0 256 256'
+      className='w-10 h-10 md:w-[60px] md:h-[60px]'
     >
       <path
         fill='#1877F2'

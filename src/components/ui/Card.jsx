@@ -38,6 +38,41 @@ export function HomePhotoCard({ data }) {
   );
 }
 
+export function HomePhotoCardMobile({ data }) {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div className='grid grid-cols-2 gap-4'>
+      {data.map((data) => (
+        <div
+          className='relative w-full h-60'
+          key={data.id}
+          onMouseEnter={() => setIsHovered(data.id)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <Image
+            src={data.src}
+            alt={data.alt}
+            fill
+            className='absolute object-cover rounded-2xl'
+          />
+          <div
+            className={`absolute inset-0 bg-black transition-opacity duration-500 ${
+              isHovered === data.id ? 'opacity-50' : 'opacity-0'
+            }`}
+          />
+          <div
+            className={`${isHovered === data.id ? 'opacity-100 visible' : 'opacity-0 invisible'} absolute inset-0 flex flex-col items-center justify-center text-white z-10 transition-opacity duration-500`}
+          >
+            <h3 className='text-2xl font-semibold mb-1'>Lorem Ipsum</h3>
+            <p className='text-lg opacity-90'>Founder</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export function HomeEcosystemCard({ data }) {
   return (
     <div className='rounded-[40px] p-5 bg-[#181818] xl:w-4xl 2xl:w-6xl 3xl:w-7xl xl:h-145 2xl:h-150 3xl:h-165'>
@@ -75,6 +110,41 @@ export function HomeEcosystemCard({ data }) {
   );
 }
 
+export function HomeEcosystemCardMobile({ data }) {
+  return (
+    <div className='rounded-[40px] p-6 bg-[#181818] h-154'>
+      <div className='flex flex-col justify-center items-center gap-6'>
+        <Image
+          alt='Card Img'
+          src={data.src}
+          width={569}
+          height={620}
+          className='rounded-4xl w-80 lg:w-96 h-auto'
+        />
+        <div className='flex flex-col justify-center'>
+          <h2 className='text-white font-semibold text-xl mb-4'>
+            {data.title}
+          </h2>
+          <p className='text-[#B1B1B1] mb-6 text-sm text-justify'>
+            {data.desc}
+          </p>
+          <div className='flex flex-row gap-4 mb-6 2xl:mb-10'>
+            {data.tag.map((tag) => (
+              <div
+                className='p-2 2xl:p-3 text-white text-xs bg-[#0F2C7B]/50 rounded-xl flex justify-center items-center text-center'
+                key={tag.id}
+              >
+                {tag}
+              </div>
+            ))}
+          </div>
+          <p className='text-(--mltPink) text-sm'>{data.feature}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function FeatureCard({ data }) {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -95,6 +165,35 @@ export function FeatureCard({ data }) {
           </h1>
           <p
             className={`${isHovered === data.id ? 'text-white' : 'text-black'} relative text-md xl:text-lg 2xl:text-xl 3xl:text-2xl mt-4 transition-colors duration-300`}
+          >
+            {data.desc}
+          </p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export function FeatureCardMobile({ data }) {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div className='flex flex-col justify-center items-center gap-4'>
+      {data.map((data) => (
+        <div
+          key={data.id}
+          className='relative border-2 border-(--mltBlack) p-4 text-center'
+          onMouseEnter={() => setIsHovered(data.id)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <div
+            className={`${isHovered === data.id ? 'h-1/2' : 'h-0'} absolute bottom-0 left-0 w-full bg-(--mltBlack) z-0 transition-[height] duration-400 ease-in-out`}
+          />
+          <h1 className='relative text-base bg-(--mltBlack) text-white py-2.5 mx-auto'>
+            {data.title}
+          </h1>
+          <p
+            className={`${isHovered === data.id ? 'text-white' : 'text-black'} relative text-sm mt-3 transition-colors duration-300`}
           >
             {data.desc}
           </p>
@@ -150,7 +249,9 @@ export default function ProductCard({
         className='rounded-xl object-cover w-full h-[360px] lg:h-[500px]'
       />
       <div className='flex flex-col justify-center'>
-        <h2 className='text-white font-bold text-2xl lg:text-4xl mb-8'>{title}</h2>
+        <h2 className='text-white font-bold text-2xl lg:text-4xl mb-8'>
+          {title}
+        </h2>
         <p className='text-[#B1B1B1] text-sm lg:text-lg mb-4'>{description}</p>
         <div className='flex flex-row gap-4 mb-4'>
           {features.map((feature, index) => (
@@ -184,7 +285,6 @@ export function PlaygroundCard({ title, description }) {
     </div>
   );
 }
-
 
 export function FounderCard({ props }) {
   const isEven = props.id % 2 === 0;
@@ -243,7 +343,9 @@ function StepCard({ id, title, subtitle, isActive, onSelect }) {
         <h3 className='font-bold text-xl lg:text-2xl leading-tight text-center'>
           {title}
         </h3>
-        <p className='leading-relaxed text-sm lg:text-lg text-center'>{subtitle}</p>
+        <p className='leading-relaxed text-sm lg:text-lg text-center'>
+          {subtitle}
+        </p>
       </div>
     </div>
   );

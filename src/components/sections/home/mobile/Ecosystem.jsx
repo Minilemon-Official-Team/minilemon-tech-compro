@@ -1,10 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { HomeEcosystemCard } from '@/components/ui/Card';
+import { HomeEcosystemCardMobile } from '@/components/ui/Card';
 import { Play } from 'lucide-react';
-import { AnimatedTrianglePolygon } from '@/components/ui/AnimatedTriangle';
-import Image from 'next/image';
+import { AnimatedTrianglePolygonMobile } from '@/components/ui/AnimatedTriangle';
 
 export default function Ecosystem() {
   const cardData = [
@@ -46,51 +45,46 @@ export default function Ecosystem() {
     setCurrentIndex((prev) => (prev === 0 ? cardData.length - 1 : prev - 1));
     setIsClicked('prev');
   };
-
   return (
-    <div className='pt-24 overflow-x-hidden'>
+    <div className='relative max-w-108 mx-auto text-white overflow-hidden mb-18'>
       <header className='relative z-20'>
         <p
           aria-hidden='true'
-          className='absolute top-0 -left-10 2xl:-left-30 3xl:-left-50 text-6xl 2xl:text-7xl 3xl:text-8xl text-white/10 font-semibold text-center tracking-tight'
+          className='absolute top-0 -left-20 text-2xl text-white/10 font-semibold text-center tracking-tight'
         >
           The Ecosystem
         </p>
         <p
           aria-hidden='true'
-          className='absolute top-0 -right-10 2xl:-right-30 3xl:-right-50 text-6xl 2xl:text-7xl 3xl:text-8xl text-white/10 font-semibold text-center tracking-tight'
+          className='absolute top-0 -right-20 text-2xl text-white/10 font-semibold text-center tracking-tight'
         >
           The Ecosystem
         </p>
-        <h2 className='text-6xl 2xl:text-7xl 3xl:text-8xl text-white font-semibold text-center tracking-tight'>
+        <h2 className='text-2xl text-white font-semibold text-center tracking-tight'>
           The Ecosystem
         </h2>
       </header>
-      <div className='w-full px-20'>
-        <div className='max-w-310 2xl:max-w-400 3xl:max-w-440 mx-auto mt-12'>
-          <div className='flex justify-center items-center'>
-            <div className='w-8/9 '>
-              <div className='transition-transform duration-500 ease-in-out'>
-                <HomeEcosystemCard data={cardData[currentIndex]} />
-              </div>
-
-              <div className='flex justify-center items-center gap-4 mt-8 -ml-12'>
-                <Play
-                  className={`${isClicked === 'prev' ? 'text-white fill-white' : 'text-white/10 fill-white/10'} scale-x-[-1] w-18 2xl:w-24 h-18 2xl:h-24 hover:cursor-pointer`}
-                  onClick={prevCard}
-                />
-                <Play
-                  className={`${isClicked === 'next' ? 'text-white fill-white' : 'text-white/10 fill-white/10'} w-18 2xl:w-24 h-18 2xl:h-24 hover:cursor-pointer`}
-                  onClick={nextCard}
-                />
-              </div>
-            </div>
-            <div className='bg-(--mltBlack) w-1/4 px-12'>
-              <AnimatedTrianglePolygon />
-              <AnimatedTrianglePolygon />
-              <AnimatedTrianglePolygon />
-            </div>
+      <div className='flex justify-center items-center pl-6'>
+        <div className='w-3/4 '>
+          <div className='transition-transform duration-500 ease-in-out mt-8'>
+            <HomeEcosystemCardMobile data={cardData[currentIndex]} />
           </div>
+
+          <div className='flex justify-center items-center gap-4 mt-4 ml-8'>
+            <Play
+              className={`${isClicked === 'prev' ? 'text-white fill-white' : 'text-white/10 fill-white/10'} scale-x-[-1] w-12 h-12 hover:cursor-pointer`}
+              onClick={prevCard}
+            />
+            <Play
+              className={`${isClicked === 'next' ? 'text-white fill-white' : 'text-white/10 fill-white/10'} w-12 h-12 hover:cursor-pointer`}
+              onClick={nextCard}
+            />
+          </div>
+        </div>
+        <div className='bg-(--mltBlack) w-1/4 px-2 pl-8 mt-4'>
+          <AnimatedTrianglePolygonMobile />
+          <AnimatedTrianglePolygonMobile />
+          <AnimatedTrianglePolygonMobile />
         </div>
       </div>
     </div>

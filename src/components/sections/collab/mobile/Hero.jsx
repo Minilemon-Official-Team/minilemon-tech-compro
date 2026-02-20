@@ -24,11 +24,11 @@ export default function Hero() {
   
   return (
     <div className='text-center mt-24 mx-auto min-h-screen flex flex-col gap-24 items-center w-full overflow-x-hidden'>
-      <header className='flex flex-col items-center justify-center border border-white pt-8 min-[520px]:pt-12'>
+      <header className='flex flex-col items-center justify-center pt-8 min-[520px]:pt-12'>
         <div className="relative inline-block">
           <p
             aria-hidden='true'
-            className='border border-white absolute -top-7 min-[520px]:-top-12 left-1/2 -translate-x-1/2 text-2xl min-[520px]:text-4xl tracking-tight text-white/10 select-none whitespace-nowrap'
+            className='absolute -top-7 min-[520px]:-top-12 left-1/2 -translate-x-1/2 text-2xl min-[520px]:text-4xl tracking-tight text-white/10 select-none whitespace-nowrap'
           >
             COLLABS
           </p>

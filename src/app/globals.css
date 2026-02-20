@@ -8,6 +8,7 @@
 @theme {
   --breakpoint-3xl: 111rem;
   --breakpoint-xl: 81rem;
+  --breakpoint-xs: 24rem;
 }
 
 body {

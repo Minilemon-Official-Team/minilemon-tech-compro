@@ -26,6 +26,29 @@ export function AnimatedTriangle() {
   );
 }
 
+export function AnimatedTriangleMobile() {
+  const [isHovered, setIsHovered] = useState(null);
+  const rotationData = [30, -10, 20, -30];
+
+  return (
+    <div className='flex justify-center items-center gap-4 overflow-hidden'>
+      {rotationData.map((value, idx) => (
+        <Image
+          key={idx}
+          src={`${isHovered === idx ? '/assets/TriangleGlow.png' : '/assets/TriangleDefault.png'}`}
+          alt='Rectangle'
+          width={75}
+          height={75}
+          className='object-contain 3xl:w-190 h-auto'
+          style={{ transform: `rotate(${value}deg)` }}
+          onMouseEnter={() => setIsHovered(idx)}
+          onMouseLeave={() => setIsHovered(null)}
+        />
+      ))}
+    </div>
+  );
+}
+
 export function AnimatedTrianglePolygon() {
   const centerX = 250;
   const centerY = 110;

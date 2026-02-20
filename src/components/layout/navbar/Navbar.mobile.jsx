@@ -25,7 +25,7 @@ export default function NavbarMobile() {
       </div>
 
       <nav
-        className={`${isOpen ? 'block' : 'hidden'} absolute bg-white top-21 w-full left-0 right-0 py-6`}
+        className={`${isOpen ? 'block' : 'hidden'} absolute bg-white top-21 w-full left-0 right-0 py-6 z-50`}
       >
         <ul className='text-center space-y-6'>
           <li className='text-(--mltBlack) hover:text-[#0044FF]'>

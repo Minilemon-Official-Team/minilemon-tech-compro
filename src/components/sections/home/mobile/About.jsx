@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function About() {
   return (
     <div className='relative max-w-108 mx-auto mt-18'>
-      <div className='relative h-218 w-full'>
+      <div className='relative h-226 w-full'>
         <Image
           src='/assets/SubtractAboutMobile.png'
           alt='bg About'
@@ -15,7 +15,8 @@ export default function About() {
         <h1 className='text-white text-2xl font-semibold mt-2 mb-12'>
           Who We Are
         </h1>
-        <p className='text-justify text-sm mb-6'>
+
+        <p className='text-justify text-sm mb-6 leading-normal'>
           Minilemon Technology is a technology-driven organization that combines
           product development, professional services, and experimental
           collaboration into one cohesive ecosystem. <br />
@@ -28,6 +29,7 @@ export default function About() {
           Our team is composed of multidisciplinary experts who are passionate
           about pushing the boundaries of what's possible in the digital realm.
         </p>
+
         <div className='flex justify-center items-center gap-8 my-7'>
           <div>
             <h1 className='text-4xl'>10+</h1>
@@ -38,7 +40,7 @@ export default function About() {
             <p className='text-sm mt-2'>Meta Partners</p>
           </div>
         </div>
-        <div className='flex justify-center'>
+        <div className='flex justify-center mt-10'>
           <Image
             src='/assets/imgAbout.png'
             alt='About image'

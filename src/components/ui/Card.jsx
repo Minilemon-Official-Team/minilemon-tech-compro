@@ -42,10 +42,10 @@ export function HomePhotoCardMobile({ data }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className='grid grid-cols-2 gap-4'>
+    <div className='grid grid-cols-2 gap-3'>
       {data.map((data) => (
         <div
-          className='relative w-full h-60'
+          className='relative w-full h-48'
           key={data.id}
           onMouseEnter={() => setIsHovered(data.id)}
           onMouseLeave={() => setIsHovered(false)}
@@ -54,7 +54,7 @@ export function HomePhotoCardMobile({ data }) {
             src={data.src}
             alt={data.alt}
             fill
-            className='absolute object-cover rounded-2xl'
+            className='absolute object-cover rounded-[20px]'
           />
           <div
             className={`absolute inset-0 bg-black transition-opacity duration-500 ${

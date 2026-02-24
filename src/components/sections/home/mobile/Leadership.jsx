@@ -34,7 +34,7 @@ export default function Leadership() {
 
   return (
     <div className='max-w-108 mx-auto my-18'>
-      <header className='flex relative z-20 mb-6 overflow-hidden pl-6'>
+      <header className='flex relative z-20 mb-8 overflow-hidden pl-6'>
         <h2 className='text-2xl text-white font-semibold text-start tracking-tight'>
           Our Leadership
         </h2>
@@ -58,7 +58,7 @@ export default function Leadership() {
             autoFill={false}
             speed={70}
             pauseOnHover={true}
-            className='overflow-hidden tracking-wide py-8'
+            className='overflow-hidden tracking-wide py-6'
           >
             {slideData.map((text) => (
               <p className='text-white text-center text-base'>

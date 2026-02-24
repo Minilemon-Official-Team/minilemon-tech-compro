@@ -35,7 +35,7 @@ export default function Features() {
 
   return (
     <div className='relative px-6 max-w-108 mx-auto'>
-      <div className='relative h-226 w-full'>
+      <div className='relative h-228 w-full'>
         <Image
           src='/assets/SubtractFeaturesMobile.png'
           alt='bg Features'
@@ -54,7 +54,7 @@ export default function Features() {
           autoFill={false}
           speed={70}
           pauseOnHover={true}
-          className='overflow-hidden tracking-wide py-6'
+          className='overflow-hidden tracking-wide py-6 xs:mt-4'
         >
           {slideData.map((text) => (
             <p className='text-(--mltBlack) text-center text-base'>

@@ -31,7 +31,7 @@ export function AnimatedTriangleMobile() {
   const rotationData = [30, -10, 20, -30];
 
   return (
-    <div className='flex justify-center items-center gap-4 overflow-hidden'>
+    <div className='flex justify-center items-center gap-6 overflow-hidden'>
       {rotationData.map((value, idx) => (
         <Image
           key={idx}
@@ -39,7 +39,7 @@ export function AnimatedTriangleMobile() {
           alt='Rectangle'
           width={75}
           height={75}
-          className='object-contain 3xl:w-190 h-auto'
+          className='object-contain w-16 h-auto'
           style={{ transform: `rotate(${value}deg)` }}
           onMouseEnter={() => setIsHovered(idx)}
           onMouseLeave={() => setIsHovered(null)}

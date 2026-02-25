@@ -36,7 +36,7 @@ export default function Scope() {
 
   return (
     <div className='relative max-w-108 mx-auto px-6 my-12'>
-      <div className='relative h-228 xs:h-210 w-full'>
+      <div className='relative h-228 xs:h-220 w-full'>
         <Image
           src='/assets/SubtractScopeMobile.png'
           alt='bg Features'
@@ -51,7 +51,7 @@ export default function Scope() {
             <span className='text-(--mltBlack)/10'>Scope</span>
           </h1>
           <div className='scale-35'>
-            <AnimatedCubes position={'-rotate-8 -top-45 -right-25'} />
+            <AnimatedCubes position={'-rotate-8 -top-55 -right-25'} />
             <AnimatedCubes position={'rotate-8 -top-45 right-15'} />
           </div>
         </div>
@@ -63,7 +63,7 @@ export default function Scope() {
           autoFill={false}
           speed={70}
           pauseOnHover={true}
-          className='overflow-hidden tracking-wide py-6'
+          className='overflow-hidden tracking-wide py-6 xs:mt-5'
         >
           {slideData.map((text) => (
             <p className='text-(--mltBlack) text-center text-base'>

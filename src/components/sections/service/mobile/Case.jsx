@@ -37,7 +37,7 @@ export default function Case() {
   ];
 
   return (
-    <div className='max-w-108 mx-auto px-6 my-12'>
+    <div className='max-w-108 mx-auto px-6 my-15'>
       <header className='mb-6 overflow-hidden'>
         <h2 className='text-2xl text-white font-semibold text-center tracking-tight'>
           Selected Case Studies

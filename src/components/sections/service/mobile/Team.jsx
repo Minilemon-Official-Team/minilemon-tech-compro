@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Team() {
   return (
-    <div className='text-white max-w-108 mx-auto px-6'>
+    <div className='text-white max-w-108 mx-auto px-6 mt-15'>
       <AnimatedTriangleMobile />
       <div className='bg-[#181818] border-2 border-white text-white p-5 my-4'>
         <Image
@@ -11,7 +11,7 @@ export default function Team() {
           alt='Card Img'
           width={346}
           height={261}
-          className='object-contain'
+          className='object-cover h-[221px] w-full'
         />
         <div className='mt-4'>
           <h2 className='text-xl font-bold leading-tight mb-4'>
